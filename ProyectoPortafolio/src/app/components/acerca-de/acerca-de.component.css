@@ -14,17 +14,17 @@ div{
 /*etiqueta foto de perfil*/
 @media (min-width: 576px){
     #foto-de-perfil{
-        position: absolute;
-        width: 12%;
-        border-radius: 55%;
-        box-shadow: 3px 3px 3px grey;
-        left: 3%;
-        top: 480px;
+        position: fluid;
+        width: 150px;
+        border-radius: 45%;
+        box-shadow: 5px 5px 5px grey;
+        left: 150px;
+        top: 37%;
     }
 }
 @media(max-width: 575px){
         #foto-de-perfil{
-            position: center;
+            position: fluid;
             width: 150px;
             border-radius: 55%;
             box-shadow: 3px 3px 3px grey;
