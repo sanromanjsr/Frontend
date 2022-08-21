@@ -9,27 +9,3 @@ h2{
     -webkit-text-stroke: 0.3vw #383d52;
     text-transform: uppercase;
 }
-
-h2::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0%;
-    height: 80%;
-    color: #ffff;
-    -webkit-text-stroke: 0vw #383d52;
-    /*border-right: 2px solid black;*/
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-    -webkit-animation: animate 6s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        width: 0;
-    }
-    70%{
-        width: 100%;
-    }
-}
