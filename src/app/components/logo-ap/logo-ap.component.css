@@ -6,24 +6,27 @@
 .redes{
     margin-right: 0.5em;
 }
-#logoAp{
+#logoAP{
     width: 150px;
 }
 img{
     width: 50px;
 }
 .btn{
-    border-width: 3px;
+    border-width: medium;
 }
-/* Vista para el celular */
 
+/*--- Para la vista de celular ---*/
 @media (max-width: 575px){
-        .container{
+    .container{
         flex-direction: column;
     }
     .redes{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .redes img{
+        margin: 0.2em;
     }
 }

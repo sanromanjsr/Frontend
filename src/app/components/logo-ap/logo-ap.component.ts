@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -7,8 +7,8 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './logo-ap.component.html',
   styleUrls: ['./logo-ap.component.css']
 })
-export class LogoApComponent implements OnInit {
-  isLogged= false;
+export class LogoAPComponent implements OnInit {
+  isLogged = false;
 
   constructor(private router:Router, private tokenService: TokenService) { }
 
@@ -16,7 +16,7 @@ export class LogoApComponent implements OnInit {
     if(this.tokenService.getToken()){
       this.isLogged=true;
     }else{
-      this.isLogged= false;
+      this.isLogged = false;
     }
   }
 
