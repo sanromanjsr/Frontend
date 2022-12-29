@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
 @Injectable({
@@ -8,28 +9,28 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaService {
 
-  experienciaURL = 'https://backendportfoliosanroman.herokuapp.com/explab/';
+  URL = environment + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(this.experienciaURL+ 'lista');
+    return this.httpClient.get<Experiencia[]>(this.URL+ 'lista');
   }
 
   public detail(id: number): Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(this.experienciaURL+ `detail/${id}`);
+    return this.httpClient.get<Experiencia[]>(this.URL+ `detail/${id}`);
   }
 
   public save(explab: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(this.experienciaURL + 'create', explab);
+    return this.httpClient.post<any>(this.URL + 'create', explab);
   }
 
   public update(id: number, expLab: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.experienciaURL + `update/${id}`, expLab);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, expLab);
   }
 
   public delete(id : number): Observable<any>{
-    return this.httpClient.delete<any>(this.experienciaURL+ `delete/${id}`);
+    return this.httpClient.delete<any>(this.URL+ `delete/${id}`);
   }
 
 }

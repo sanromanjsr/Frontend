@@ -9,8 +9,6 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  eduURL = 'https://backendportfoliosanroman.herokuapp.com/educacion/';
-
   URL = environment.URL + 'educacion/';
 
   constructor(private httpClient : HttpClient) { }
