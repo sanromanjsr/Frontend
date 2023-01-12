@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 
-  expURL = 'https://backendportfoliosanroman.herokuapp.com/explab/';
+  expURL = environment +'/explab/';
   
   URL = environment.URL + 'explab/';
 
